@@ -1,0 +1,6 @@
+expressServer/data/
+expressServer/node_modules/
+expressServer/createDB/
+AngularApplication/.angular/
+AngularApplication/node_modules/
+Mocha/node_modules/

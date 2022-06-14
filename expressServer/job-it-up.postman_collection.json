@@ -1,0 +1,581 @@
+{
+	"info": {
+		"_postman_id": "f76cb1be-9ff8-452b-8a70-07f58ca7030c",
+		"name": "job-it-up",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19570950"
+	},
+	"item": [
+		{
+			"name": "getJobById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/job/0c2e58bfc1e3e54d1d7cb03f9915757b/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						"0c2e58bfc1e3e54d1d7cb03f9915757b",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllJobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/job/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchJobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/app/jobs?title=Dental%20Assistant&domain=Dental&startDate=05/09/2022&endDate=05/13/2022&location=Seattle,WA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobs"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Dental%20Assistant"
+						},
+						{
+							"key": "domain",
+							"value": "Dental"
+						},
+						{
+							"key": "startDate",
+							"value": "05/09/2022"
+						},
+						{
+							"key": "endDate",
+							"value": "05/13/2022"
+						},
+						{
+							"key": "location",
+							"value": "Seattle,WA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJobsbyJobPoster",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/job/jobposter/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						"jobposter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchJobsbyJobPoster",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobs/jobposter/2/search?title=Dental%20Assistant&domain=Dental&startDate=05/09/2022&endDate=05/13/2022&location=Seattle,WA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobs",
+						"jobposter",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Dental%20Assistant"
+						},
+						{
+							"key": "domain",
+							"value": "Dental"
+						},
+						{
+							"key": "startDate",
+							"value": "05/09/2022"
+						},
+						{
+							"key": "endDate",
+							"value": "05/13/2022"
+						},
+						{
+							"key": "location",
+							"value": "Seattle,WA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJobsWithApplicants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/job/jobposter/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						"jobposter",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createJob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"skills\": [\r\n            \"JavaScript\",\r\n            \"Angular\"\r\n        ],\r\n        \"title\": \"SoftwarTest e Developer\",\r\n        \"jobPosterId\": \"2\",\r\n        \"location\": \"Seattle, WA\",\r\n        \"description\": \"Job Requirements:Test\",\r\n        \"salary\": \"$23/hr\",\r\n        \"applyDeadline\": \"05/11/2022\",\r\n        \"startDate\": \"05/16/2022\",\r\n        \"endDate\": \"05/30/2022\",\r\n        \"experienceNeeded\": \"3 years\",\r\n        \"hasApplicants\": \"N\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/job/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateJob",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"skills\": [\r\n        \"JavaScript\",\r\n        \"Angular\"\r\n    ],\r\n    \"title\": \"SoftwarTest e Developer\",\r\n    \"jobPosterId\": \"2\",\r\n    \"location\": \"Seattle, WA\",\r\n    \"description\": \"Job Requirements:Test\",\r\n    \"salary\": \"$23/hr\",\r\n    \"applyDeadline\": \"05/11/2022\",\r\n    \"startDate\": \"05/16/2022\",\r\n    \"endDate\": \"05/30/2022\",\r\n    \"experienceNeeded\": \"3 years\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/job/0c2e58bfc1e3e54d1d7cb03f9915757b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						"0c2e58bfc1e3e54d1d7cb03f9915757b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteJob",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/job/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"job",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAlljobPosters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobposter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobposter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJobPosterbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobposter/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobposter",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteJobPoster",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobposter/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobposter",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createJobPoster",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": \"5\",\r\n        \"contactNo\": \"4258810000\",\r\n        \"fname\": \"Johnny\",\r\n        \"lname\": \"Doe\",\r\n        \"email\": \"johnny.doe@email.com\",\r\n        \"referralCode\": \"RP2804224875\",\r\n        \"location\": \"Kent, WA\",\r\n        \"companyName\": \"Doe Dentistry\",\r\n        \"picture\": \"http:localhost:8080/images/poster/jdoe.jpg\",\r\n        \"companyLogo\": \"http:localhost:8080/images/company/jdentistry.jpg\",\r\n        \"Overview\": \"We are your family dentist. /n We specialize in orthodontics\",\r\n        \"website\": \"doedentistry.com\",\r\n        \"industry\": \"Dental\",\r\n        \"companySize\": \"10-25\",\r\n        \"headquarters\": \"Kent, WA\",\r\n        \"founded\": \"2020\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/jobposter/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobposter",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAlljobSeekers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobposter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobposter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJobSeekerbyId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobposter/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobposter",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createJobSeeker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"education\": [\r\n            {\r\n                \"educationId\": \"1\",\r\n                \"universityName\": \"Seattle University\",\r\n                \"degree\": \"Masters in Computer Science\",\r\n                \"fromDate\": \"08-16-2016\",\r\n                \"toDate\": \"05-06-2018\"\r\n            },\r\n            {\r\n                \"educationId\": \"2\",\r\n                \"universityName\": \"Seattle University\",\r\n                \"degree\": \"Bachelors in Computer Science\",\r\n                \"fromDate\": \"08-16-2012\",\r\n                \"toDate\": \"05-06-2016\"\r\n            }\r\n        ],\r\n        \"workExperience\": [\r\n            {\r\n                \"workExperienceId\": \"1\",\r\n                \"companyName\": \"Tim's Co-op.\",\r\n                \"role\": \"Software Engineer\",\r\n                \"fromDate\": \"06-27-2020\",\r\n                \"toDate\": \"04-27-2021\"\r\n            },\r\n            {\r\n                \"workExperienceId\": \"2\",\r\n                \"companyName\": \"Web MD\",\r\n                \"role\": \"Software Engineer\",\r\n                \"fromDate\": \"06-27-2021\",\r\n                \"toDate\": \"04-27-2022\"\r\n            }\r\n        ],\r\n        \"primarySkills\": [\r\n            \"Node\",\r\n            \"Angular\",\r\n            \"Express\"\r\n        ],\r\n        \"otherSkills\": [\r\n            \"React\",\r\n            \"MongoDB\",\r\n            \"Mongoose\"\r\n        ],\r\n        \"userId\": \"1\",\r\n        \"bio\": \"A software engineer looking for freelance opportunities in Angular\",\r\n        \"resume\": \"http:localhost:8080/resume/seeker/jsmith.pdf\",\r\n        \"picture\": \"http:localhost:8080/images/seeker/jsmith.jpg\",\r\n        \"location\": \"Seattle, WA\",\r\n        \"fname\": \"John\",\r\n        \"lname\": \"Smith\",\r\n        \"contactNo\": \"4254420000\",\r\n        \"email\": \"john.smith@email.com\",\r\n        \"referralCode\": \"RS2804221238\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/jobseeker/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobseeker",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userName\": \"Sam Doe\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllJobApplications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/jobApplication",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobApplication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJobApplicationById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/application/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"application",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getJobApplicationByJobId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/application/job/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"application",
+						"job",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createJobApplication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"jobId\": \"2\",\r\n        \"jobSeekerId\": \"3\",\r\n        \"expectedSalary\": \"20/hr\",\r\n        \"resume\": \"http:localhost:8080/resume/seeker/cdecker.doc\",\r\n        \"workAuthorization\": \"yes\",\r\n        \"status\": \"Applied\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/jobApplication/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"jobApplication",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

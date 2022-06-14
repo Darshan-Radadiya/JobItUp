@@ -1,0 +1,203 @@
+<div class="container">
+    <div class='col-md-12'>
+        <h1 class="text-center">Edit Profile</h1>
+    </div>
+        <form [formGroup]="checkoutForm" (ngSubmit)="submitForm(checkoutForm)">
+
+            <div class='col-md-12'>
+                <div class="row">
+                <div class="col-md-6">
+                    <h4><strong><label class="control-label">First Name</label></strong></h4>                    
+
+                    <input type="text" class="form-control" formControlName="fname" [(ngModel)]=fname required>
+                </div>
+
+                <div class="col-md-6">
+                    <h4><strong><label class="control-label">Last Name</label></strong></h4>                    
+
+                    <input type="text" class="form-control" formControlName="lname" [(ngModel)]=lname required>
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <div class="border">
+                    <hr class="heading_border">
+                    <h3 class="section-header"><strong>About</strong></h3>
+                    <hr class="heading_border">
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <div class="row">
+                <div class="col-md-12">
+                    <h4><strong><label class="control-label">Bio</label></strong></h4>                    
+                    <input type="text" class="form-control bio" formControlName="bio" [(ngModel)]=bio required>
+                </div>
+                </div>
+
+                <div class='col-md-12'>
+                    <hr class="line">
+                </div>
+            </div>
+
+                <div class='col-md-12'>
+                    <div class="row">
+                    <div class="col-md-3">
+                        <h4><strong><label class="control-label">Resume</label></strong></h4>     
+                        <div class="col-md-5">               
+                        <a href={{resume}} download rel="noopener noreferrer" target="_blank">
+                            <h5>{{fname+" "+lname}}</h5>
+                        </a>
+                        </div>
+                        <div class="col-md-7">
+                        <!-- <input type="file" class="form-control" formControlName="resume" required> -->
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4><strong><label class="control-label">Contact</label></strong></h4>
+                        <input type="tel" class="form-control" formControlName="contactNo" [(ngModel)]=contactNo required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4><strong><label class="control-label">Email</label></strong></h4>
+                        <input type="email" class="form-control" formControlName="email" [(ngModel)]=email required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4><strong><label class="control-label">Location</label></strong></h4>
+                        <input type="text" class="form-control" formControlName="location" [(ngModel)]=location required>
+                    </div>
+                    </div>
+                </div>
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+            <div class='col-md-12'>
+                <div class="border">
+                <hr class="heading_border">
+                <h3 class="section-header"><strong>Skills</strong></h3>
+                <hr class="heading_border">
+                </div>
+            </div>
+
+
+            <div class='col-md-12'>
+                <h4><strong>Primary Skills</strong></h4>
+                <div class="row">
+                <!-- <div *ngFor="let skill of primarySkills; let i = index "> -->
+                    <div class='col-md-4'>
+                        <input type="text" class="form-control" formControlName="primarySkills" [(ngModel)]=primarySkills>
+                    </div>
+                <!-- </div> -->
+                </div>
+            </div>
+
+
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+            <div class='col-md-12'>
+                <h4><strong>Other Skills</strong></h4>
+                <div class="row">
+                    <!-- <div *ngFor="let skill of otherSkills; let i = index "> -->
+                        <div class='col-md-4'>
+                            <input type="text" class="form-control" formControlName="otherSkills" [(ngModel)]=otherSkills>
+                        </div>
+                    <!-- </div> -->
+                    </div>
+            </div>
+
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+            <div class='col-md-12'>
+                <div class="border">
+                <hr class="heading_border">
+                    <h3 class="section-header"><strong>Work Experience</strong></h3>
+                    <hr class="heading_border">
+                </div>
+                <div formArrayName="workExperience" *ngFor="let work of workExperiences; let i = index" >
+                    <div class="row" formGroupName = "{{i}}">
+                    <div class='col-md-3'> 
+                        <h4><strong><label class="control-label">Company Name</label></strong></h4>
+                        <input type="text" class="form-control" formControlName="companyName" [(ngModel)]=work.companyName/>
+                    </div>
+
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">Role</label></strong></h4>
+                        <input type="text" class="form-control" formControlName="role" [(ngModel)]=work.role/>
+                    </div>
+
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">From Date</label></strong></h4>
+                        <input type="text" class="form-control" formControlName="fromDate" [(ngModel)]=work.fromDate/>
+                    </div>
+                   
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">To Date</label></strong></h4>
+                        <input type="text" class="form-control" formControlName="toDate" [(ngModel)]=work.toDate/>
+                    </div>
+                    </div>
+
+                    <div class='col-md-12'>
+                        <hr class="line">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='col-md-12'>
+                <div class="border">
+                <hr class="heading_border">
+                <h3 class="section-header"><strong>Education</strong></h3>
+                <hr class="heading_border">
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <div *ngFor="let education of educations; let i = index " formArrayName=education>
+                    <div class="row" formGroupName = "{{i}}">
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">University Name</label></strong></h4>
+                        <input type="text" class="form-control" formControlName=universityName [(ngModel)]=education.universityName>
+                    </div>
+
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">Degree</label></strong></h4>
+                        <input type="text" class="form-control" formControlName=degree [(ngModel)]=education.degree>
+                    </div>
+                    
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">From Date</label></strong></h4>
+                        <input type="text" class="form-control" formControlName=fromDate [(ngModel)]=education.fromDate>
+                    </div>
+
+                    <div class='col-md-3'>
+                        <h4><strong><label class="control-label">To Date</label></strong></h4>
+                        <input type="text" class="form-control" formControlName=toDate [(ngModel)]=education.toDate>
+                    </div>
+                </div>
+
+                    <div class='col-md-12'>
+                        <hr class="line">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12" >
+                <button class="btn btn-primary btn-lg click" type="submit">Update</button>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="btn btn-cancel btn-lg" routerLink={{jobSeekerLink((jobSeekerId))}} >Back</button>
+                <div *ngIf="response_id.length>0">
+                    <h4>The profile has been updated successfully!</h4>
+                 </div>
+            </div>
+
+        </form>
+        </div>

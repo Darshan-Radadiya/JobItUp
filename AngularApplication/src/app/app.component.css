@@ -1,0 +1,17 @@
+.a {
+    font-size: 40px;
+    font-family: Montserrat, sans-serif;
+	color: black; 
+}
+
+.text-white {
+    color: white;
+}
+
+.navbar-nav > .active > a {
+    color: white;
+}
+
+.bg-dark {
+    background-color: black;
+}

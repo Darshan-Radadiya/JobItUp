@@ -1,0 +1,159 @@
+
+  <div>
+    <div class="row ml-1" style="margin-top: 20px" >
+      <div class="col-md-12">
+        <div class="row">
+        <p style="color: white"><strong>Google User: {{this.userId}}</strong></p>
+        </div>
+        <div class="row">
+        <p style="color: white"><strong>Google Name: {{this.displayName}}</strong></p>
+        </div>
+    </div>
+        <div class="text-over-img-first">
+            <h3>
+                Find work you'll love, fast.
+            </h3>
+        </div>
+        <form [formGroup]="checkoutForm" >
+          <div class="search-form">
+        <div class="form-group" >
+        <div class="container" >
+                    <div class="row" style=" margin-top:15%;margin-left:8%">
+                        <div class="col-lg-10" style="width:100%">
+                                <div  class="col-md-2 col-sm-12 p-0"  style="padding:0px;width:15%">
+                                    <input type="text" formControlName="title" class=" form-control search-slt" style="padding:0px;width:100% " placeholder="Enter job role" >
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-12 p-0" style="padding:0px;width:15% " >
+                                    <select class="form-control search-slt " formControlName="domain" style="padding:0px;width:100%" id="domain"  >
+                                        <option>Select Domain</option>
+                                        <option>Dental</option>
+                                        <option>Software</option>
+                                        <option>Tutor</option>
+                                        <option>UX Designing</option>
+                                    </select>
+                                </div>
+                                <div  class="col-lg-2 col-md-3 col-sm-12 p-0" style="padding:0px;width:15%" >
+                                    <input input type="date" id="startDate" formControlName="startDate" class="form-control search-slt " />
+                                </div>
+                                <div  class="col-lg-2 col-md-3 col-sm-12 p-0" style="padding:0px;width:15%" >
+                                    <input input type="date" id="endDate" formControlName="endDate" class="form-control search-slt " />
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-12 p-0" style="padding:0px;width:15%" >
+                                    <input type="text" class="form-control search-slt" formControlName="location"style="padding:0px;width:100%" placeholder="Enter Location" >
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-12 p-0" style="padding:0px; width:120px;">
+                                    <button type="button" class="btn wrn-btn" style="background-color:#3E9AE9;color:white" (click)="search()" >Search</button>
+                                </div>
+                        </div>
+                        <div class="col-lg-2" *ngIf="isJobSeeker == 'N'" style="width:100%">
+                        <div hidden>
+                            <br>
+                            <input class="form-check-input" type="checkbox" id="check1" name="JobsWithAppplicants" value="something" checked>
+                            <label class="form-check-label" style="color:white">Show Jobs with Applicants</label>
+                          </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+          </div>
+        </form>
+        <div class="text-over-img">
+        <h4>
+            Experience the new way to work..
+        </h4>
+        </div>
+    </div>
+
+
+    <div class="row ml-1" style="margin: 10px">
+        <div class='col-lg-3'>
+            <ul class='list-group'>
+              <div *ngFor="let job of results; let i = index "> 
+                <li class="list-group-item " let first="first" [ngClass]="{'active': selectedJob == job}" (click)="listClick(job,i)">
+                  <div class="media-left"> 
+                    <!-- <img class="media-object" src={{selectedJobPoster.companyLogo}}/> -->
+                <!-- <img class="media-object" src="data:image/jpeg;base64,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" /> -->
+                    <img class="media-object" src={{companyLogo[i]}}/>
+                  </div>
+                <div class="media-body">
+                  <a href="#job1" data-toggle='tab' style="color:black;"> 
+                    <h4 class="media-heading">{{job.title}}</h4></a>
+                    <!-- <h4 class="media-heading"><a routerLink={{link(i)}}>{{job.title}}</a></h4> -->
+                  <!-- </a> -->
+                  <p class="list-group-item-text" style="color:black;">{{companyName[i]}}</p>
+                   <p class="list-group-item-text" style="color:black;">{{job.location}}</p>
+                </div>
+                </li>
+              </div>
+            </ul>
+          </div> 
+
+          <div class='col-lg-9 tab-content active'>
+           
+            <div class='panel tab-pane active' id='job1'>
+                <div *ngIf="selectedJob">
+            <div class='col-lg-2'>
+            <div class="text-center" role="group">
+                  <h3><strong><img src= {{this.selectedCompanyLogo}} /></strong></h3>
+                <h5 class='list-group-item-text'>{{this.selectedCompanyName}}</h5>
+                <h5 class='list-group-item-text'>{{selectedJob.location}}</h5>
+                <br>
+                <div id="applyJob" class="text-center" role="group">
+                <button class="btn btn-md btn-primary" *ngIf="isJobSeeker == 'Y'" routerLink={{link((selectedJob.jobId))}}>Apply Now</button>
+                </div>
+                <br>
+                <div id="applyJob" class="text-center" role="group">
+                    <button class="btn btn-md btn-primary" *ngIf="isJobSeeker == 'N'" routerLink={{viewApplicants(selectedJob.jobId)}}>View Applicants</button>
+                    </div>
+                    <br>
+                    <div id="editJob" class="text-center" role="group">
+                        <button class="btn btn-wrn btn-md" *ngIf="isJobSeeker == 'N'" routerLink={{editJobLink((selectedJob.jobId))}}>Edit Job</button>
+                        </div>
+            </div>
+            </div>
+            
+            <div class='col-lg-10'>
+            <ul class='list-group'>
+              <div class="col-md-12">
+                <h3><strong>{{selectedJob.title}}</strong></h3>
+                </div>
+                <div class="col-md-4">
+
+                <h4><strong>Salary</strong></h4>
+                <p>{{selectedJob.salary}}</p>
+                </div>
+                <div class="col-md-4">
+                <h4><strong>Skills</strong></h4>
+                <p>{{selectedJob.skills}}</p>
+              </div>
+              <div class="col-md-4">
+                <h4><strong>Experience</strong></h4>
+                <p>{{selectedJob.experienceNeeded}}</p>
+              </div>
+
+
+              <div class="col-md-4">
+                <h4><strong>Deadline</strong></h4>
+                <p>{{selectedJob.applyDeadline}}</p>
+                </div>
+
+                <div class="col-md-4">
+                  <h4><strong>Duration</strong></h4>
+                  <p>{{selectedJob.startDate}} to {{selectedJob.endDate}}</p> 
+                  </div>
+                
+
+              <div class="col-md-12">
+                <h4><strong>Job Description</strong></h4>
+                 <div *ngFor="let desc of getDescription(selectedJob.description)">{{desc}}</div> 
+              </div>
+
+            </ul>           
+            </div>
+            </div>
+          </div>
+        
+        </div>
+    </div>
+
+  </div>

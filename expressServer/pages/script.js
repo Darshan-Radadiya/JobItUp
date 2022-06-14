@@ -1,0 +1,1 @@
+document.getElementById('startDate').value = new Date().toISOString().slice(0, 10);

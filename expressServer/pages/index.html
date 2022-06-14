@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Job It Up</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- need to change below a tag with img for logo. -->
+                    <a class="a"  href="#">
+                        Job It Up
+                    </a>
+                </div>
+            <div class="">
+                <ul class="nav navbar-nav navbar-right bg-dark">
+                    <li class="active"><a href="#">
+                            HOME
+                        </a></li>
+                    <li><a href="#" class="text-white">APPLIED JOBS</a></li>
+                    <li><a href="#" class="text-white">PROFILE</a></li>
+                    <li><a href="#" class="text-white">ACCOUNT DATA</a></li>
+                    <li><a href="#" class="text-white">LOG OUT</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <div class="row ml-1" style="margin-top: 20px" >
+            <div class="text-over-img-first">
+                <h3>
+                    Find work you'll love, fast.
+                </h3>
+            </div>
+			<div class="search-form">
+            <div class="container">
+                    <form action="#" method="post" novalidate="novalidate" style="width:100%">
+                        <div class="row" style=" margin-top:15%;margin-left:8%">
+                            <div class="col-lg-12" style="width:100%">
+                                <div class="row" style="width:100%">
+                                    <div  class="col-md-2 col-sm-12 p-0"  style="padding:0px;width:15%">
+                                        <input type="text" class=" form-control search-slt" style="padding:0px;width:100% " placeholder="Enter job role" >
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0" style="padding:0px;width:15% " >
+                                        <select class="form-control search-slt " style="padding:0px;width:100%" id="exampleFormControlSelect1" >
+                                            <option>Select Domain</option>
+                                            <option>Dentist</option>
+                                            <option>Front End Engineer</option>
+                                            <option>Full Stack Developer</option>
+                                            <option>Third Choice</option>
+                                        </select>
+                                    </div>
+                                    <div  class="col-lg-3 col-md-3 col-sm-12 p-0" style="padding:0px;width:15%" >
+                                        <input input type="date" id="startDate" class="form-control search-slt " />
+                                    </div>
+                                    <div  class="col-lg-3 col-md-3 col-sm-12 p-0" style="padding:0px;width:15%" >
+                                        <input input type="date" id="endDate" class="form-control search-slt " />
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0" style="padding:0px;width:15%" >
+                                        <input type="text" class="form-control search-slt" style="padding:0px;width:100%" placeholder="Enter Location" >
+                                    </div>
+                                  
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0" style="padding:0px; width:120px;">
+                                        <button type="button" class="btn wrn-btn" style="background-color:#3E9AE9;color:white" >Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+				</div>
+            <div class="text-over-img">
+            <h4>
+                Experience the new way to work..
+            </h4>
+			</div>
+        </div>
+        <div class="row ml-1" style="margin: 10px">
+            <div class='col-lg-3'>
+                <ul class='list-group'>
+                  <li class="list-group-item active">
+                    <div class="media-left">
+                      
+                  <img class="media-object" src="data:image/jpeg;base64,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" />
+                    </div>
+                  <div class="media-body">
+                    <a href="#job1" data-toggle='tab' style="color:black;"> <h4 class="media-heading">Front End Developer</h4></a>
+                    <p class="list-group-item-text" style="color:black;">Protingent</p>
+                     <p class="list-group-item-text" style="color:black;">Tucson,AZ</p>
+                  </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media-left">
+                      <img class="media-object" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGv0lEQVR42u2bW1ATVxjH207bl/rSPvShnelDp0/20YdWSwkm2U0UQYGCUgURFc0mGwiQAEIISLgGUUCsiiKKqFRQud+UoigXRUAcReo4WiveirYzrYAJ8PWcDUG8EJNNMBfYmW/CC8n5fuf/P2fPfvu9997cZT8Xh6P60IVLz3flU34/8KVfOXWyC4nNn3N4Ej5KNmIxKS4ihKF9bqRYxyHE4IbClaA0TpHoggUhHy0WUN9yCIkvSi6BL6AbCKH0/kSi497L5cPSgOTRVFEuHFAUQqnyGAT7xes4fGqbwyW7iC/+Qj+r4lCugC4mhWHXDbNKCqW6gJ/itMoNWZAny4eyuGPQkVEHXdsaoSuzES6n10GrugpqthyHdT5KrV0DmO+r+hjPqitPFMjhi7OJJXQLmtl/cKJIzmM+yxUj4YFpYxrxLiiKKoKzKZX6RHFoGqAzrQ4uJddAR0IltMWVQ2vMSSaao0qhXFYMQd5x9gMAz6orIfJAsxrFF0qPEUL6thtfPI6TXbJU9jx4pYqZ1T3h+6EmsQwuZzZMzGoDM6uXUmrh4tYqaI+vgLbYU5PJvilsCoAgIj5x44s46IclbqQknyegu5FHR3CihECqXe0TOxwTrBnPDd2L5FsCrem1L+SbUQ+dqSjRpOrXZtWcsCkALiGtxYuSl6d8hA5Qj6ZTO+GQ4hA0qstfzKpBvmq9fNuVKNEtJ1klawzAz8uj8SJ4DqvOWoEtaxQA8nA7XomnzqpevtXQrnq7fK0JwMs9cnTpigidf6BqaM26pGeWBv4utK0WvBWAev121vK1JgBsAXVaIfTfvAvPhoYtjiT0XUgFB4wC4AmkbUlrt9ks+ZkGwCGofmSrPWjX2o0+/WcVgJYLPZCmKWJCpd43vlggGePwKOGsAfBqbKTSh5El4mctgM10xjC+LbdrAInJBdDdexMe/fWUVfz73zPHBbDWO1YbvCkFMncchb0F5ayitf3qnAIcGoDdrgGW3igZ+3+7B9CRWAVPrt2HnuwzrJLv2XEaHnfddVwA+Az/tO8BPOq8wxxvzQXQm9cMg1cHHB/A4JV7cOtUz4wBWOsVq6XDs6DwcA1UVLewir7+29MCQDsMAkDFsQZwbd955vNKbtOMKSAyeieUV7bAhbZeVvHHnw8nE66ubQUqVDOEY70odQjN/tiPpGgRawD4EyvAXCvYygITh6FeFGkoEl154oWsDkNTAbQrK+DhxdtmWcFWABJTDqDjMFXqwhN9PVFveN9iAMyqjnYDxgo5TXYNIGhjMuBHe4bgL5HewnUJiwHgMMcKtlSATJ4DXd39cKP/Dvis2oKedVIyqwAwxwrmAIhV7YHmli5mNWcTg4N/v7QGxCh3w72Bx9bZBqcCMMcKJm+D6DAUQqVDTt5xOFhUwyo6u2+8OwCmWsGWu8CMAzDFCk4NwBQrOD2At1lhVgAwZoVZAcCYFZx6FzDFCk57H2CqFWxlgfik/UBJM6GuoYOB6uEtf45K/tSMAniTFWwFIHhT6pSzADXGdw9t4nCoeTMO4FUr2HIRtEpxlA2AqVaYlQCmWuHWiW6TAURY8YlQmCIbUEXY8uowWwAGKzy9/sAmzwQxAL/VSsDFFouqw5YAMFjBHm6EWFeH8UI2cPZ3Vo/EDXWBu6f7HPdO0JHfEJkD4GgArFkddjgA1n4/YE4Bc2vAHIA5AFMBsK4OOyoAcVgWLPOWj4ZI0oenrQ7jd4XjAzTQrCiFlugTTgVAEZtnSnWYbg/3T4ZTssPMICrDi6Em4ijUy0vgjPxXOIsGdyHmxDsB4Lk0fAy13IyR7jKtYJnsuaXBRYcfV0K81/hxmJCU6FteJKM+HvIRsW/CuCowE3JDdkGJ9CAzMBxV4UegDoFpRGB+QwM+h9RiLTAGAGu8YnSonF2pb7SyTnC5m740q+nJjaCKeaT0Omqi0Om7RmjdSs8obdgqNSQFZcGukF+gLLSIGXCF7AhURxyB+sgSOI3UghNhYyO77Bl6te2NS0rquYTkiaHtzdM9YmiDj3I0enUabN+QCwfF+1+zUUOkwUZlcD7awQBMd7m4iz5Fg3SZUEs+j6QvG3qM0IKq8/OMGqH9tgK2EVZL6YRaXrKRogSaFMcn1eJQAKZtfUWvoeAuswm1lCPr3EF/M11mQmGYNmhFLKMWTXAOFFD5SC3Fk2rByjlKFzJPhBwSgDG1GDrS8GrMJXFHGqVXC0lrfT0Uw/TKreMJSC0Z67LBX9805TwA3nipVB9wSOobN57YB6uFR0oq0NY3YOhJRKBSZ2kHOTUPqeO770nZZ+/i9/4HnB3AGtEohwcAAAAASUVORK5CYII=" />
+                    </div>
+                    <div class="media-body">
+                      <a href="#job2" data-toggle='tab' style="color:black;"> <h4 class="list-group-item-heading">Software Tester</h4></a>
+                     
+                      <p class="list-group-item-text" style="color:black;">Northwest Administrators, Inc.</p>
+                     <p class="list-group-item-text" style="color:black;">Seattle,WA</p>
+                    </div>
+                  </li>
+                
+                  <li class="list-group-item">
+                    <div class="media-left">
+                      <img class="media-object" src="data:image/png;base64,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" />
+                  </div>
+                  <div class="media-body">
+                    <a href="#job3" data-toggle='tab' style="color:black;"> <h4 class="media-heading">Hygienist</h4></a>
+                    <p class="list-group-item-text" style="color:black;">The Dental Shoppee</p>
+                     <p class="list-group-item-text" style="color:black;">Seattle,WA</p>
+                  </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media-left">
+                      <img class="media-object" src="data:image/png;base64,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" />
+                  </div>
+                  <div class="media-body">
+                    <a href="#panel1" data-toggle='tab' style="color:black;"> <h4 class="media-heading">Maths Tutor</h4></a>
+                    <p class="list-group-item-text" style="color:black;">SuperProf</p>
+                     <p class="list-group-item-text" style="color:black;">Seattle,WA</p>
+                  </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media-left">
+                      <img class="media-object" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFcklEQVR4nO2ae0xTdxTHWWa2JftnfyzZn8Z7C7IOOxcyiY4Mt4RsZG6IyOK2aOY2NELQuSWUwlgRQZB7C4UKWkAJLvIavkBgDl1LaymPQgdFynMKDpTHKCDqggL7nUKzWgoW2t7b1nuSb9L2NPee8/k9zu/+ftfNjTHGGLPGeMJ1b0QRWD5SCe0i8aMhJW4vUgqAm4IHohvPHRV7DR7L4fTTpdgMzwmIg0tiZymFwCPx7XDjdl1ER/fU4Tm6dEkZKOUR+CzlEBwJwE/C9WM55f5SPQQCK+Lz/dY8dwCK5TvmKIXgiAAoheCoACiD4MgAKIFgDgB8PlG4uVV47t12W+iKKlhqCQAUy3RynneTqaJT3acWqkMmJQC0Ewd7c8u3Nogv+jbZQtdvfil5FoDWoTCV+ML7S17jSBZ7GC2W2ikB4Ij65ap/LQOAAUAhAPXd/XdVd0L7qVbTQOjftAOoUAXXw2906WzVh4uqBqUA0OepX2s+kRdc/1hGtYr/CJC1jBwYpX0IOJoYAAwACgHAbJx8euONxGxOLdVKyuUoZF172mkFUNOxuy1GwOrlCVj9lCuVdbusLqiOGQIMAAYAvQCUt/d2y7v3tFMtRc/XHZ2Th2ZoBVDesKOOzqVwXgXNS2HteMQjgHCpLrCWapXVByrbxsLHaR8CjiYGAAPAiQFc03yhFhVtlqbkvSPPLNkikWq/0jwXADSjYbr4THajfnYn8IcogV6kf+F7othLqdVFTLksgI7J75/wRZ5/6hMmcB6fv/YVuN+PBOdVLoElcEnscfwpr3q7AeDz2S+hGwuRbqEEx5YSCuY+AIhN95iME72pW0rHT2+8da11l6Tr/uFZSwI+L9+mmG95Vpi5+JAvBvyVzSGNdgEA1OG8ncz3UaYX+cqs1fEz3ioIuHHgO4UlASdke6HFFNbjNuf2gvkG8luD4A/DvGAfACR+Jf7khk7Ts7ZVSxY0A2d3F258WmNJwDFCdy1K8PLyMWI1P4s81XbqAdhvCTlva2wGACk2Y/29Utk2mSUBx51gN6NeWP+MRupKFHOULgkg9/JWCZfEZyJJfIu5+CIJLACGVEH1Rxb1KKcDAOt5noA1tDAJexvHxkvB3uMS+GB0KqsPPXc8tBsACDjrvJ/UVkIBT1kKAFTTufsm6gWjKJZpNN7LUOkTIRiV0DN4AnwQHrntVgYBQFQq/ni50rZSRQlYMysBAGoZPjCcUegjjU5z74kiWbqYNI+urFJfSdto+NhKrrMqABnFPiteci6n+JNvWTwEbC2rAcAuS9PA0weRmpHwf4xvAgeTxn7UeiMuA0BYsElquvMCy1HVwL4B8MOsvdiPz8A2lUsASMrm1MLMixLbB4L3bSBJlKDWAAgl/MDIfwz8VeqdDcYAzv3ur+iYONRPteCVHasBGF8AJfeZKQB4NjD4IwXrNpkDQOdeIWqgFut6AImNogsl60XgpWZ6wKP//Vj+EgCqUTUIoUNcAbZh1QDOlH8ghTJkLJ7A/Y7hLL5EGiDnkayxp/4jwO819H3zlwkAscVB0Gn2KoNOC0A9tH/IdAv6qvpzlcEPC5My5Xalsb9CFdwAGxsuAQCeu81NLMq+b3vBD3t15vzVml1qlwCgrwIk1hOV6o6BeCl4qJkqMG7wc1OwoCUmQScGYJsy6LwAFsqcal6oN5gCIPAnBj9aNGldCgCc9R3JZDfFGSkph1Or1R18AH7Yu4/LYquM/bCvZ/w84FQAuARWlV7o02bLMjj/xjZ+iu7cLDIEQBAtwKfhVXVFz16Ztaps3ilZWI5G0J2bRfYD6fE6ai2zpW9VIvBZBPViRDrrZbpzW5HpQSyUNmvET1v7Gt25MMbYYvsPQe3KS8xTF5gAAAAASUVORK5CYII=" />
+                  </div>
+                  <div class="media-body">
+                    <a href="#panel1" data-toggle='tab' style="color:black;"> <h4 class="media-heading">Accounting Assistant</h4></a>
+                    <p class="list-group-item-text" style="color:black;">4000 Archdiocese Of Seattle Payroll Svc</p>
+                     <p class="list-group-item-text" style="color:black;">Seattle,WA</p>
+                  </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="media-left">
+                      <img class="media-object" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAM9ElEQVR42u1bCVSU1xXWJmmSk2Ztm6Sn8bRN0iU2JzlpGhcYJe7GnNbUFk2iBmIaYIZNmP9ncQEFl0BQXJBdUcQFaxT3HQho1Ai4Y0RgAI1bpIorguH23h/+f96/zhgGjT3OOe/AzP/eu/e777777r3v/p063f/c/9yVz5s+4U/29LM+2z0o8jn6//8WaC9zaBeThf/A3czPdrdw+dhsbhb+lruFB7YJv5n5GjczX+Bm5ubi95HdfcN/e0+CJsYRSBQCK1MCve1m5g7hXDE9LBEv/+iB97Tw/XDlNiLT37cbuLq1oGZsdfezvvOjA+7mz/VE1S7SY97NwlWhUHJQxYNRQENMvtautPdN5oinPYKDn/KwcM93N4e9Qs96WqxBOGaxMEZXK/ivTGbe464D7/FJyDPIdCatjgboCnw2jsD+YI0KCP2TuzksEoX7jaZGWPhFpsDIX94V8LQCuKon1Yxx+bQVsEtnF5LrjCdGXwS8TcNGnHX3Dxtwp8GHqyx5q7Hq0/F2xtobt8B+Be3v8bdJLha61tnt81CbyrMrfpME4hEd/aAzc6RVwZMZVdAtvQb+lWGDjzNqwSejBkalV8PQzDp4dXYFPOxoDqKFoDkUeKNCIxZ39Yz+aYeAJ6IIfoVsn5v5apPZ+qYh4BJ4KK0W/p5mg3RsJxA4GDXscyutBvbi38/S6uAtQ23wC30DeTgu54lb1xFC6IwTL1WsfJGRAcJVfo5ApNvgO0egDQVSA+Vp1eCrpxl0kqDBLVQszCpPT88HXIYe1W2qgsCmHiEhj2r1nVEHjyLjUxD49fYAVzUbnML2gRbNwYGBD6MNyFPwmOiaM97Mj2CPObLERFBT3WvADVe92qXA1W1Lkg2eV9ImtRecMPlR7N0u8N0Cw17ASf7LgD9KjosmeBuE4Ao1i4wmV9yEmOJKCFpeAL7ZG6QWumoXTCqsgKTjNyRQKZVNwm/W1V+B/5KtMCZ9FfhkrYOAZdshakc5zC2/qtwWZ1OrobfKL0GtRB5LGC24avIP/cMP3vetwYvkfTVo+eMA0BmBx4nMxRZXw/CE+WAKCDd0bXsFRsII7Pd+YhZ4BI8z7Etz0ZxTdtWwgmhE4+qpcUz+BsfUs15jp+jon+hbUrP1XTzGfKiROyoZF4rg5NZ1lNZ4ZCSh1Xq3CKtm8g+DDogDWgWBc3+6YK1ASzwx8CgdprJZFutwGe/+/L8N9ji3nVEZP1GV8PspxtHYoKP2VnFFvFNyVQwPDJ0IQYnzYOqixUKLWbAILDPmwGBuoi7IT+MSYdbyXJienQOhc1Lg3bBoVR+vlBWscbyOp0R3FS72yEZvsVtg4BNOC8DdEhbA/NbYK8D6O9XK26AHMtBETIzfckjG4MiYONiyuxguN5yBq5fPqlrDpdNQVLYXuKRUFbghfJTwXOx7Gf8v2LcbRsXGy/pN2HaYtQl1c0/Bz1VbwcxfZ47tCKcE0OrtcbWM4UtSjsk+A48h4VqRgaGxcyXGfOJnwYX6k5rAtdrXR8rAL2G2TGsuXfxW1a++/pQwt9jvH1OTlIZxqXor8HEMtjMeXtGPOBQAgh/KSLqph2/IrzVUP14knHj4kmxlDlccYRg/B01N19FOtkAz/jUSxJele2DmslwoLT+g2+fgN4dk9mD2kQaZEFJroJ8sG+Uz9leI54ahHVMKAFVlDbP6K1SqfxJeQGnfFInGFFVKTA2NjJExfKu5EdiPs1ph1FibEFtcpdSC/XQqyZ04PosRwFZjAVh4noIbZsBADWcnkSUaubFMYujjqQkSo9ev1TPQW6DxRoNLBOCNNER6RFvpKOGpMEThyPVh846UiNEVAFrLzYw2XCR7wPbNssEjKICLLMHxWw9LDJGhEhm92XhZgu8q8NQ+nPyZ3RBuP6IVTK2TAUQfAIGfZoQw0kAArNXkD4v+gdjC15RYlQTJ2xPHvDfOvgWuXfkObt1qErYB2QJXCYC2mbQFdlZpxQzNyZXwrOJIXMQscoa+ABw0v+xNXysJJuy/IDNMZ8/Vugyssp0+WyNztGYerNeOIKvBSxYxBnDuaAzN7gHhr6uiRNzzy50VwNiVRRfVKtcC/ayTpD5riwo6TABrvsyX6PTnJhsFTAtvI70V8SLu91yK8oxar6BxRRO3H9Uk6JWcKzOEV3QcoPY0mtNryufa3qB6Gxx1eUYIJ+6rR3Dq7jqZpmzaWeRyAdCcLI3pe04aJVFuRgM86FoB2MDbKE4fMTNLYm541HSZO9veRnPRnOL8RMth3gD9FZcKAKUaZEQwbt8ZWQi8vrjQZQKgudjQmGg5EgD6A6+4egvwjoiOSloqMeo/c64hKApyyk8chbJjBx3GDjSXOO9opOFkLvEvrtaAAEdEKRkiJTzwuDp3vkZ3RYeNi2UCoAmQs2mjZl86VnsxR9+UnTanBJBZDX90tQBGO05pt0Bfq91XL8QARwmIgOods1nr16v6UygsPu/LTZKSIY6aVt6wfQKoBZMzhCl1JTI8f+1aGZjK2gp4Oyhc5jj1DoqUvtOz6roTsjHpeXl24zdjgUP6qVXNMOfYtWsDQ6KfoZS5XtNL7OoL4Fv4hTMCGJOxyu6pYXjLgonNypaeDQifAp+XnYdZGE7T/9LxhpkgdsyMpculZ59krnZInxKrzjh1wq2SOWzY7QnBiZsdv2y7ilMKTARyARMa/ZjkJ792r53pPDvT/UPGC8kPcdzk+QulZ+bFm10mAM1Un7tfWA+MDWLx4Q78G6ohgDRHDFAaXCQQnpwhAdm8y+7IvD12IqbCm6UxySeawGPseOk5pdPEcWHJ6dLvQbkFLhUAebjKS5Ao5lKhUCmAVBsMdsQA5f3FOYIxISoCic+xH5Gj5uSoxo3E38TncYuXSOMoqSr+TuAc0cc7hmve81Z3Yfc7LSgb5usKoKc5zI299aUCCPb5CoAH0CM8bcRA+PoSJsM7SwIyZtoMO5A8NRB2G3hNsSdWKEss/h6xoRScuFzNkV/uBD4hv0W2B38qAQjXzhb+HKMFZg2HaIIRA2yGeBRmh0Ugg6wTDM/yaUw80Tc4UsooyxIgTCZYVwCKG2Xc1l7y1Wcy3koBtCYPuFmMkdinfI5ZoaeQ0CVnAiMyegSEjBq79xIPXVSNm1dxQ9bHhschjSVhOBMAtXl/mzXw7GZWP6U172kgALpzVxwXfTQCo7F6TMyraJQlLarqKuD0GZsMXNLx65pjewfZTwnKAFfWHpf5DHTfaBACN6dUw+vq4i07XbwFe8uhANRZIi5f+ZxCTSRYqsfMoIhpElFKYpAQWEZSq29pjuuHSQ6xz95DpZBXuEP6PihymqO9H6+BYyuDY1eboXcsAJOZ6y+7kzPz76kKIOrgZSTcoMWMd+p/pLF0jFHQI8UIARG6IFg3uuToAeCT0uyJlrSVRuBLlAUUJgs3WIYBvzstAKX0qBTGbQz/uEoIeDFJF5RKhihzZAccDqsK7CvZJ2SiLhCPYLsv8EX+DmGs+D0q/5jevj+Lf2VXd3QDhAneSraahTnqnRMAWss/oxCadbOpdnvgh0JokSclv4d3xsfLrrskVY7QV+V+vD3jOyDEfmoMmRCvFwQ1aIW9VGssq0HGZChbTSL6Bx6W6J85qA4RvELQzamLHiJmYdniCEELth3R9L4+mrdMP58wd4nmGCqS0Fp5rDBTFWi5+XH/VFzrJ7S3LK6E8QtumCzW7ppFUXgjg0K4wDJJ9QIsM7TCeqlsajMO1Mu0QPD/c7ZogS+bXwsvqkt2+b9SVQgzvuy2oz7VpIHcS6j+F5itcAGN5GtafRecgC4ohG3KixMqdSEXeU75FYeOzJxjV2HsF0XCGEVFiFhCl6hVMSbUGuMNMOv0tKc8ppPG/VoTo1bnjeoDkdH3sVW5uDgqP9MGb+icWq/JPFi0XXSSubo81pM1ioKqma1/0+tPvoKQRbLBrnaAbsTxKykZo2ussXye6pdYo4flPaM7pFrU3Y/7kNWEtvK5OOUlqpbPgCCCEcwaod7PwJtDoR3HlkXCS66Fpw3LZS3cZLZmufWtE+6jjn03AK/MWYm3qVwpuZnOzpF5DB5PqYGubTXDfcmao4BeWnEEnCpxbSuR3aPg4YqRRrq2YtvP+ioK4ZiyYhuZmN+R7/nQ+0dCQKOqVOcrSSh3tGR+gNX6mPbLEtxN4Toas0uueyMFjzeBlr14gzmaF2p5qXfudRk6IZTaYBdGOdUZU6Llds5jsimt6Tk+BoEf1ElqHr/jL0oYMUwFFGx1mWYW1sLtpXeH2jxMq1h4gSBDBINm5rJpb7OFTRp5vDocY+mw9wLa82krWB6JQIpdXimKJa9k4dvt2d2pT29f/vdtRVdFGm92ONHQlqAg6W0Uenmq0738Ic0Q9jTW7KJ6TxO2gYVfS4mXtrYOvy9BQU0XtgRmcu6Zlb7/ucc//wMd0xXtXu6iVAAAAABJRU5ErkJggg==" />
+                  </div>
+                  <div class="media-body">
+                    <a href="#panel1" data-toggle='tab' style="color:black;"> <h4 class="media-heading">Dental Hygenist</h4></a>
+                    <p class="list-group-item-text" style="color:black;">Totem Lake family dentistry</p>
+                     <p class="list-group-item-text" style="color:black;">Kirkland,WA</p>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+            <div class='col-lg-9 tab-content active'>
+				<div class='panel tab-pane active' id='job1'>
+				<div class='col-lg-2'>
+				<div class="text-center" role="group">
+                      <h3><strong><img src="data:image/jpeg;base64,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" /></h3></strong>
+                    <h5 class='list-group-item-text'>Protingent</h5>
+					<h5 class='list-group-item-text'>Tucson, AZ</h5>
+					<br>
+					<div class="text-center" role="group">
+                    <a class="btn btn-lg btn-primary" href="#" >Apply Now</a>
+                    </div>
+				</div>
+				</div>
+				
+	            <div class='col-lg-10'>
+				<ul class='list-group'>
+					<h3><strong>Front End Developer</strong></h3>
+					<h4><strong>Salary</strong></h4>
+					<p>$25-30 per hour</p>
+					<h4><strong>Deadline</strong></h4>
+					<p>15th May 2022</p>
+					<h4><strong>Experience</strong></h4>
+					<p>3-4 years</p>
+					<h4><strong>Job Description</strong></h4>
+					<p>1. Determining the structure and design of web pages.<br>
+					2. Ensuring user experience determines design choices.<br>
+					3. Developing features to enhance the user experience.<br>
+					4. Striking a balance between functional and aesthetic design.<br>
+					5. Ensuring web design is optimized for smartphones.<br>
+					6. Building reusable code for future use.<br>
+					7. Optimizing web pages for maximum speed and scalability.<br>
+					8. Utilizing a variety of markup languages to write web pages<br>
+					<br>
+					Job Qualifications:<br>
+					1. 4+ years of experience as a Front End Java Developer.<br>
+					2. Proficiency in Java, HTML, CSS, JavaScript, and modern front end technologies like Angular, [website] or React.<br>
+					3. Experience with responsive and adaptive design.<br>
+					4. Good problem-solving skills.<br>
+					<br>
+					About Protingent: 
+					<br>
+					Protingent is a niche provider of top Engineering and IT talent to Software, Electronics, Medical Device, Telecom and Aerospace companies nationwide. Protingent exists to make a positive impact and contribution to the lives of others as well as our community by providing relevant, rewarding and exciting work opportunities for our candidates
+					</p>
+				  </ul>
+				  </div>
+				  </div>
+			
+				<div class='panel tab-pane' id='job2'>
+				<div class='col-lg-2'>
+				<div class="text-center" role="group">
+                      <h3><strong><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGv0lEQVR42u2bW1ATVxjH207bl/rSPvShnelDp0/20YdWSwkm2U0UQYGCUgURFc0mGwiQAEIISLgGUUCsiiKKqFRQud+UoigXRUAcReo4WiveirYzrYAJ8PWcDUG8EJNNMBfYmW/CC8n5fuf/P2fPfvu9997cZT8Xh6P60IVLz3flU34/8KVfOXWyC4nNn3N4Ej5KNmIxKS4ihKF9bqRYxyHE4IbClaA0TpHoggUhHy0WUN9yCIkvSi6BL6AbCKH0/kSi497L5cPSgOTRVFEuHFAUQqnyGAT7xes4fGqbwyW7iC/+Qj+r4lCugC4mhWHXDbNKCqW6gJ/itMoNWZAny4eyuGPQkVEHXdsaoSuzES6n10GrugpqthyHdT5KrV0DmO+r+hjPqitPFMjhi7OJJXQLmtl/cKJIzmM+yxUj4YFpYxrxLiiKKoKzKZX6RHFoGqAzrQ4uJddAR0IltMWVQ2vMSSaao0qhXFYMQd5x9gMAz6orIfJAsxrFF0qPEUL6thtfPI6TXbJU9jx4pYqZ1T3h+6EmsQwuZzZMzGoDM6uXUmrh4tYqaI+vgLbYU5PJvilsCoAgIj5x44s46IclbqQknyegu5FHR3CihECqXe0TOxwTrBnPDd2L5FsCrem1L+SbUQ+dqSjRpOrXZtWcsCkALiGtxYuSl6d8hA5Qj6ZTO+GQ4hA0qstfzKpBvmq9fNuVKNEtJ1klawzAz8uj8SJ4DqvOWoEtaxQA8nA7XomnzqpevtXQrnq7fK0JwMs9cnTpigidf6BqaM26pGeWBv4utK0WvBWAev121vK1JgBsAXVaIfTfvAvPhoYtjiT0XUgFB4wC4AmkbUlrt9ks+ZkGwCGofmSrPWjX2o0+/WcVgJYLPZCmKWJCpd43vlggGePwKOGsAfBqbKTSh5El4mctgM10xjC+LbdrAInJBdDdexMe/fWUVfz73zPHBbDWO1YbvCkFMncchb0F5ayitf3qnAIcGoDdrgGW3igZ+3+7B9CRWAVPrt2HnuwzrJLv2XEaHnfddVwA+Az/tO8BPOq8wxxvzQXQm9cMg1cHHB/A4JV7cOtUz4wBWOsVq6XDs6DwcA1UVLewir7+29MCQDsMAkDFsQZwbd955vNKbtOMKSAyeieUV7bAhbZeVvHHnw8nE66ubQUqVDOEY70odQjN/tiPpGgRawD4EyvAXCvYygITh6FeFGkoEl154oWsDkNTAbQrK+DhxdtmWcFWABJTDqDjMFXqwhN9PVFveN9iAMyqjnYDxgo5TXYNIGhjMuBHe4bgL5HewnUJiwHgMMcKtlSATJ4DXd39cKP/Dvis2oKedVIyqwAwxwrmAIhV7YHmli5mNWcTg4N/v7QGxCh3w72Bx9bZBqcCMMcKJm+D6DAUQqVDTt5xOFhUwyo6u2+8OwCmWsGWu8CMAzDFCk4NwBQrOD2At1lhVgAwZoVZAcCYFZx6FzDFCk57H2CqFWxlgfik/UBJM6GuoYOB6uEtf45K/tSMAniTFWwFIHhT6pSzADXGdw9t4nCoeTMO4FUr2HIRtEpxlA2AqVaYlQCmWuHWiW6TAURY8YlQmCIbUEXY8uowWwAGKzy9/sAmzwQxAL/VSsDFFouqw5YAMFjBHm6EWFeH8UI2cPZ3Vo/EDXWBu6f7HPdO0JHfEJkD4GgArFkddjgA1n4/YE4Bc2vAHIA5AFMBsK4OOyoAcVgWLPOWj4ZI0oenrQ7jd4XjAzTQrCiFlugTTgVAEZtnSnWYbg/3T4ZTssPMICrDi6Em4ijUy0vgjPxXOIsGdyHmxDsB4Lk0fAy13IyR7jKtYJnsuaXBRYcfV0K81/hxmJCU6FteJKM+HvIRsW/CuCowE3JDdkGJ9CAzMBxV4UegDoFpRGB+QwM+h9RiLTAGAGu8YnSonF2pb7SyTnC5m740q+nJjaCKeaT0Omqi0Om7RmjdSs8obdgqNSQFZcGukF+gLLSIGXCF7AhURxyB+sgSOI3UghNhYyO77Bl6te2NS0rquYTkiaHtzdM9YmiDj3I0enUabN+QCwfF+1+zUUOkwUZlcD7awQBMd7m4iz5Fg3SZUEs+j6QvG3qM0IKq8/OMGqH9tgK2EVZL6YRaXrKRogSaFMcn1eJQAKZtfUWvoeAuswm1lCPr3EF/M11mQmGYNmhFLKMWTXAOFFD5SC3Fk2rByjlKFzJPhBwSgDG1GDrS8GrMJXFHGqVXC0lrfT0Uw/TKreMJSC0Z67LBX9805TwA3nipVB9wSOobN57YB6uFR0oq0NY3YOhJRKBSZ2kHOTUPqeO770nZZ+/i9/4HnB3AGtEohwcAAAAASUVORK5CYII=" /></h3></strong>
+                    <h5 class='list-group-item-text'>Northwest Administrators, Inc.</h5>
+					<h5 class='list-group-item-text'>Seattle,WA</h5>
+					<br>
+					<div class="text-center" role="group">
+                    <a class="btn btn-lg btn-primary" href="#" >Apply Now</a>
+                    </div>
+				</div>
+				</div>
+				
+	            <div class='col-lg-10 active'>
+				<ul class='list-group'>
+					<h3><strong>Software Tester</strong></h3>
+					<h4><strong>Salary</strong></h4>
+					<p>$15-25 per hour</p>
+					<h4><strong>Deadline</strong></h4>
+					<p>10th May 2022</p>
+					<h4><strong>Experience</strong></h4>
+					<p>2-3 years</p>
+					<h4><strong>Job Description</strong></h4>
+					<p>1.Assists in the distribution of all Quality Assurance practices, standards, methodologies and metrics<br>
+					2.Performs test executions and writes test scripts for complex integrated systems<br>
+					3.Performs regression testing on new software releases and reports findings<br>
+					4.Participates in the development and implementation of structured testing concepts, methodologies, and automated testing and support tools<br>
+					<br>
+					Job Qualifications:<br>
+					1.Proven quality assurance and project analysis experience<br>
+					2.Extensive JavaScript, Angular, web-services testing hands-on experience<br>
+					3.Experience with QA Automation tools: Protractor and Selenium<br>
+					4.Ability to perform white-box testing and write regression and automation scripts<br>
+					5.Must be able to code unit test cases and writing QA automation scripts<br>
+					6.Strong technical writing, presentation, training and demonstration<br>
+					<br>
+					About Northwest Administrators: 
+					<br>
+					Northwest Administrators is a outsourcer of modern automation technologies and their applications. The projects vary from web-based and API-level testing.
+					</p>
+				  </ul>
+				  </div>
+            </div>
+			
+			<div class='panel tab-pane' id='job3'>
+				<div class='col-lg-2'>
+				<div class="text-center" role="group">
+                      <h3><strong><img src="data:image/png;base64,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" /></h3></strong>
+                    <h5 class='list-group-item-text'>The Dental Shoppee</h5>
+					<h5 class='list-group-item-text'>Seattle,WA</h5>
+					<br>
+					<div class="text-center" role="group">
+                    <a class="btn btn-lg btn-primary" href="#" >Apply Now</a>
+                    </div>
+				</div>
+				</div>
+				
+	            <div class='col-lg-10 active'>
+				<ul class='list-group'>
+					<h3><strong>Hygienist</strong></h3>
+					<h4><strong>Salary</strong></h4>
+					<p>$35-50 per hour</p>
+					<h4><strong>Deadline</strong></h4>
+					<p>5th May 2022</p>
+					<h4><strong>Experience</strong></h4>
+					<p>1-3 years</p>
+					<h4><strong>Job Description</strong></h4>
+					<p>1.The Hygienist will provide the Dentist with assistance in the delivery of pre-dentist examination, dental care and related services in order to achieve the best possible treatment for the patient.<br>
+					2. Hygienist must be proficient with general assisting ( experience preferred), utilizing various sedation options.<br>
+					3. Prepare and maintain instruments, equipment and materials for all dental procedures, while ensuring patients are as relaxed and comfortable as possible.<br>
+					4. Work under the supervision of an Dentist to perform all aspects of fourhanded dentistry and dental assisting including rubber dam management within the scope outlined by his/her state’s dental practice act.<br>
+					<br>
+					Job Qualifications:<br>
+					1. Active Dental Hygienist Registration at hire.<br>
+					2. Expanded Functions certificate(s), required or willing to obtain.<br>
+					3. Additional Qualifications - Current government mandates require full COVID vaccination status, or lawful exemption status, for all persons, including student externs, who will be working or present in an Washington health care facility.<br>
+					<br>
+					About The Dental Shoppee: 
+					<br>
+					The Dental Shoppee is your family dental clinic. We are keeping our employees safe, please visit https://thedentalshoppee.com/safety. 
+					</p>
+				  </ul>
+				  </div>  
+            </div>
+			
+        </div>
+    </div>
+	</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="./script.js"></script>
+</body>
+</html>

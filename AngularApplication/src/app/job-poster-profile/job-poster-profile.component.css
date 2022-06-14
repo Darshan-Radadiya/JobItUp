@@ -1,0 +1,35 @@
+.overview {
+    height: 100px;
+    margin-left: 15px;
+    border:1px; 
+    border-radius: 13   px;
+    border-style:solid; 
+    border-color:black;
+}
+
+
+.style
+{
+    color:#337ab7;
+}
+
+.heading_border {
+    /* border-bottom: 1px solid var(--color-border-faint); */
+    background-color: lightgrey;
+    border-color:black;
+    
+  }
+  .line {
+    /* border-bottom: 1px solid var(--color-border-faint); */
+    background-color: lightgrey;
+    width: 100%;
+  }
+  .border {
+    border-color:black;
+    background-color: lightgrey;
+  }
+
+h3.section-header strong {
+  /* color: rgb(3, 104, 255); */
+  color: black;
+  }

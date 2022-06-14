@@ -1,0 +1,135 @@
+<div class="container">
+    <div class='col-md-12'>
+        <h1 class="text-center">Profile</h1>
+    </div>
+
+    <div class='col-md-10'>
+        <div class="media-left">
+            <img class="media-object" src={{companyLogo}}/>
+          </div>
+    </div>
+
+    <div id="editProfile" class="col-md-2">
+        <button type="button" class="btn btn-dark" *ngIf="isJobPoster == 'Y'" routerLink={{jobPosterEditLink((jobPosterId))}}>Edit Profile</button>
+        <!-- <a class="btn btn-lg btn-primary" *ngIf="isJobSeeker == 'Y'" routerLink={{link((selectedJob.jobId))}}>Edit Job</a> -->
+    </div>
+
+            <div class='col-md-12'>
+                <h2><strong>{{companyName}}</strong></h2>
+            </div>
+
+            <div class='col-md-12'>
+                <div class="border">
+                    <hr class="heading_border">
+                    <h3 class="section-header"><strong>Company Overview</strong></h3>
+                    <hr class="heading_border">
+                </div>
+
+                <div >
+                   <h5> <div *ngFor="let desc of getDescription(Overview)">{{desc}}</div> </h5>
+                  
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>Company Website:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{website}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>Contact No:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{contactNo}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>Industry:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{industry}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>Company Size:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{companySize}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>HeadQuarters:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{headquarters}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>Founded In:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{founded}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+            <div class='col-md-10'>
+                <div class="row">
+                <div class='col-md-3'>
+                    <h4 style="color: black"><strong>Company Location:</strong></h4>
+                </div>
+
+                <div class='col-md-3'>
+                    <h4>{{location}}</h4> 
+                </div>
+                </div>
+            </div>
+
+            <div class='col-md-12'>
+                <hr class="line">
+            </div>
+
+</div>
+                

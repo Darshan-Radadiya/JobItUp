@@ -1,0 +1,39 @@
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>View Applicants</h2></div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Applicant Name </th>
+                        <th>Application Status </th>
+                        <th>Email id</th>
+                        <th>Contact number</th>
+                        <th>Applied For </th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of jobApplication; let i = index">
+                        <td> {{i+1}} </td>
+                        <td> {{this.applicantName[i]}} </td>
+                        <td> {{this.status[i]}} </td>
+                        <td> {{this.email[i]}} </td>
+                        <td> {{this.phone[i]}} </td>
+                        <td> {{this.applied_for[i]}} </td>
+                        <td>
+                            <button [ngClass]="{'active': selectedApplication == item}" (click)="acceptBtn(item)" title="Accept" data-toggle="tooltip" class="btn btn-success btn-sm"> <span class="glyphicon glyphicon-ok"></span></button>
+                            &nbsp;
+                            <button [ngClass]="{'active': selectedApplication == item}" (click)="rejectBtn(item)" title="Reject" data-toggle="tooltip" class="btn btn-danger btn-sm"> <span class="glyphicon glyphicon-trash"></span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>  
+</div>   

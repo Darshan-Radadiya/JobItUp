@@ -1,0 +1,105 @@
+<div class="container">
+    <h1 class="text-center" *ngIf="!selectedJob">Post Job</h1>
+    <h1 class="text-center" *ngIf="selectedJob">Edit Job</h1>
+    &nbsp;
+    &nbsp;
+    <div class="row justify-content-center">
+        <div class="col-md-12 align-center">
+            <form [formGroup]="checkoutForm" (ngSubmit)="submitForm(checkoutForm.value)">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Job Title</label>
+                            <input type="text" class="form-control" formControlName="title" *ngIf="!selectedJob" required>
+                            <input type="text" class="form-control" formControlName="title" *ngIf="selectedJob" [(ngModel)]="selectedJob.title" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Job Domain</label>
+                            <input type="text" class="form-control" formControlName="domain" *ngIf="!selectedJob"  required>
+                            <input type="text" class="form-control" formControlName="domain" *ngIf="selectedJob"  [(ngModel)]="selectedJob.domain" required>
+                        </div>
+                        &nbsp;
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Skills</label>
+                            <input type="text" class="form-control" formControlName="skills" *ngIf="!selectedJob"  required>
+                            <input type="text" class="form-control" formControlName="skills" *ngIf="selectedJob" [(ngModel)]="selectedJob.skills" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Experience</label>
+                            <input type="text" class="form-control" formControlName="experienceNeeded" *ngIf="!selectedJob"  required>
+                            <input type="text" class="form-control" formControlName="experienceNeeded" *ngIf="selectedJob" [(ngModel)]="selectedJob.experienceNeeded" required>
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Location</label>
+                            <input type="text" class="form-control" formControlName="location" *ngIf="!selectedJob" required>
+                            <input type="text" class="form-control" formControlName="location" *ngIf="selectedJob" [(ngModel)]="selectedJob.location" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Salary (per hour) </label>
+                            <input type="string" class="form-control" rows="5" formControlName="salary" *ngIf="!selectedJob" required>
+                            <input type="string" class="form-control" rows="5" formControlName="salary" *ngIf="selectedJob" [(ngModel)]="selectedJob.salary" required>
+                        </div>
+                    </div>
+                    &nbsp;
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Start date</label>
+                            <input id="start" type="date" class="form-control search-slt" formControlName="startDate" *ngIf="!selectedJob"  required>
+                            <input type="date" class="form-control search-slt" formControlName="startDate" *ngIf="selectedJob" [ngModel]="selectedJob.startDate | date:'yyyy-MM-dd'" 
+                            (ngModelChange)="selectedJob.startDate = $event" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">End Date</label>
+                            <input type="date" class="form-control search-slt" formControlName="endDate" *ngIf="!selectedJob"  required>
+                            <input type="date" class="form-control search-slt" formControlName="endDate" *ngIf="selectedJob" [ngModel]="selectedJob.endDate | date:'yyyy-MM-dd'" 
+                            (ngModelChange)="selectedJob.endDate = $event" required>
+                        </div>
+                    </div>
+                    &nbsp;
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Apply Deadline</label>
+                            <input type="date" class="form-control search-slt" formControlName="applyDeadline" *ngIf="!selectedJob" required>
+                            <input type="date" class="form-control search-slt" formControlName="applyDeadline" *ngIf="selectedJob" [ngModel]="selectedJob.applyDeadline | date:'yyyy-MM-dd'" 
+                            (ngModelChange)="selectedJob.applyDeadline = $event" required>
+                        </div>
+                    </div>
+                    &nbsp;
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Job Description</label>
+                            <textarea id="text" formControlName="description" cols="150" *ngIf="selectedJob" [(ngModel)]="selectedJob.description"  required></textarea>
+                            <textarea id="text" formControlName="description" cols="150" *ngIf="!selectedJob" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+
+                <div class="form-group">
+                    <div class="row text-center">
+                        <div class="col-md-12" >
+                            <button class="btn btn-primary btn-lg click" *ngIf="!selectedJob" type="submit">Post</button>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <button class="btn btn-primary btn-lg click" *ngIf="selectedJob" type="submit" >Update</button>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <button class="btn btn-primary btn-lg click" *ngIf="selectedJob" (click)="deleteBtn()" type="submit">Close Job</button>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <button class="btn btn-cancel btn-lg" routerLink={{alljobs()}} >Back</button>
+                            <div *ngIf="response_id.length>0">
+                                <h4>The job post has been persisted successfully!</h4>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

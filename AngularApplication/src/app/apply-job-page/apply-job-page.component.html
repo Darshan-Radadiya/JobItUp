@@ -1,0 +1,69 @@
+<div class="container">
+    <h1 class="text-center">Apply Job</h1>
+    &nbsp;
+    &nbsp;
+    <div class="row justify-content-center">
+        <div class="col-md-12 align-center">
+            <form [formGroup]="checkoutForm" (ngSubmit)="submitForm(checkoutForm.value)">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">First Name</label>
+                            <input type="text" class="form-control" formControlName="fname" placeholder="John" readonly="readonly" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Last Name</label>
+                            <input type="text" class="form-control" formControlName="lname" placeholder= "Doe" readonly="readonly" required>
+                        </div>
+                        &nbsp;
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Email</label>
+                            <input type="email" class="form-control" formControlName="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Phone</label>
+                            <input type="tel" class="form-control" formControlName="phone" required>
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="control-label">Authorized to work in the US</label>
+                            <select class="form-control" formControlName="workAuthorization" required>
+                                <option selected="selected" value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label">Expected Salary (per hour) </label>
+                            <input type="number" class="form-control" rows="5" formControlName="expectedSalary" required>
+                        </div>
+                    </div>
+                    &nbsp;
+                    <div class="row">
+                        <div class="col-md-6" hidden>
+                            <label class="control-label">Resume</label>
+                            <input type="file" class="form-control" formControlName="resume" required>
+                        </div>
+                    </div>
+                </div>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+
+                <div class="form-group">
+                    <div class="row text-center">
+                        <div class="col-md-12" >
+                            <button class="btn btn-primary btn-lg click" type="submit">Apply</button>
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <button class="btn btn-cancel btn-lg" routerLink={{alljobs()}} >Back</button>
+                            <div *ngIf="response_id.length>0">
+                                <h4>The job application has been sent successfully!</h4>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
